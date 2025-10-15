@@ -3,15 +3,15 @@ package calculator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Devider {
+public class Divider {
     String custom = null;
     String input;
 
-    public Devider(String input) {
+    public Divider(String input) {
         this.input = input;
     }
-    
-    public void customdevider() {
+
+    public void customdivider() {
         if (input.startsWith("//")) {
             Pattern pattern = Pattern.compile("//(.*)\\n(.*)");
             Matcher matcher = pattern.matcher(input);
@@ -22,5 +22,12 @@ public class Devider {
         }
     }
 
+    public String[] divide(String input) {
+        String regex = ":|,";
+        if (custom != null) {
+            regex = regex + "|" + custom;
+        }
+        return input.split(regex);
+    }
 }
 
