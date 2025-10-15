@@ -10,10 +10,11 @@ public class Calculator {
         input = Console.readLine();
     }
 
-    public int add(List<Integer> nums) {
+    public int add(String[] st) {
         int result = 0;
-        for (int a : nums) {
-            result += a;
+        for (String a : st) {
+            int num = Integer.parseInt(a);
+            result += num;
         }
         return result;
     }
