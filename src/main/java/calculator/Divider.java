@@ -13,7 +13,7 @@ public class Divider {
 
     public void customdivider() {
         if (input.startsWith("//")) {
-            Pattern pattern = Pattern.compile("//(.*)\\n(.*)");
+            Pattern pattern = Pattern.compile("//(.*)\\\\n(.*)");
             Matcher matcher = pattern.matcher(input);
             if (matcher.find()) {
                 custom = matcher.group(1);
@@ -25,7 +25,7 @@ public class Divider {
     public String[] divide() {
         String regex = ":|,";
         if (custom != null) {
-            regex = regex + "|" + custom;
+            regex = regex + "|" + Pattern.quote(custom);
         }
         return this.input.split(regex);
     }
