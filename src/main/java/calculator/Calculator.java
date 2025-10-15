@@ -7,9 +7,12 @@ public class Calculator {
     private String input;
 
     public void userinput() {
-        input = Console.readLine();
+        this.input = Console.readLine();
     }
 
+    public String getinput() {
+        return this.input;
+    }
     public int add(String[] st) {
         int result = 0;
         for (String a : st) {
