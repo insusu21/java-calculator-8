@@ -22,12 +22,12 @@ public class Divider {
         }
     }
 
-    public String[] divide(String input) {
+    public String[] divide() {
         String regex = ":|,";
         if (custom != null) {
             regex = regex + "|" + custom;
         }
-        return input.split(regex);
+        return this.input.split(regex);
     }
 }
 
