@@ -10,7 +10,8 @@ public class Devider {
     public Devider(String input) {
         this.input = input;
     }
-    public void customdevider(String input) {
+    
+    public void customdevider() {
         if (input.startsWith("//")) {
             Pattern pattern = Pattern.compile("//(.*)\\n(.*)");
             Matcher matcher = pattern.matcher(input);
