@@ -6,6 +6,7 @@ public class Calculator {
     private String input;
 
     public void userinput() {
+        System.out.println("덧셈할 문자열을 입력해 주세요.");
         this.input = Console.readLine();
     }
 
@@ -15,7 +16,7 @@ public class Calculator {
     public int add(String[] st) {
         int result = 0;
         for (String a : st) {
-            if (a == null) {
+            if (a.isEmpty()) {
                 return 0;
             }
             if(!a.matches("\\d+")){
