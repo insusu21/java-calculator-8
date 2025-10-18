@@ -24,9 +24,7 @@ public class Calculator {
             if (a.isEmpty()) {
                 return 0;
             }
-            if(!a.matches("\\d+")){
-                throw new IllegalArgumentException();
-            }
+
             int num = Integer.parseInt(a);
             result += num;
         }
