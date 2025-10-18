@@ -12,7 +12,7 @@ public class Application {
         String[] st = div.divide();
 
         Validator val = new Validator();
-        val.ValidateWrong(st);
+        val.validatewrong(st);
 
         result = cal.add(st);
         cal.print(result);
