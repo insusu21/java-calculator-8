@@ -13,6 +13,11 @@ public class Calculator {
     public String getinput() {
         return this.input;
     }
+
+    public void print(int result) {
+        System.out.println("결과 : " + result);
+    }
+
     public int add(String[] st) {
         int result = 0;
         for (String a : st) {

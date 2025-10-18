@@ -9,7 +9,7 @@ public class Application {
             Divider div = new Divider(cal.getinput());
             div.customdivider();
             result = cal.add(div.divide());
-            System.out.println("결과 : " + result);
+            cal.print(result);
         } catch (IllegalArgumentException e){
             throw e;
         }
