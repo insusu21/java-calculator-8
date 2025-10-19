@@ -9,12 +9,15 @@ public class Application {
 
         Divider div = new Divider(cal.getinput());
         div.customdivider();
-        String[] st = div.divide();
+        String[] nums = div.divide();
 
+        if (nums.length == 1 && nums[0].isEmpty()) {
+            cal.print(0);
+        }
         Validator val = new Validator();
-        val.validatewrong(st);
+        val.validatewrong(nums);
 
-        result = cal.add(st);
+        result = cal.add(nums);
         cal.print(result);
     }
 }

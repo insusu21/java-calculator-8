@@ -18,15 +18,11 @@ public class Calculator {
         System.out.println("결과 : " + result);
     }
 
-    public int add(String[] st) {
+    public int add(String[] nums) {
         int result = 0;
-        for (String a : st) {
-            if (a.isEmpty()) {
-                return 0;
-            }
-
-            int num = Integer.parseInt(a);
-            result += num;
+        for (String num : nums) {
+            int temp = Integer.parseInt(num);
+            result += temp;
         }
         return result;
     }
